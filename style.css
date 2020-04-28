@@ -1,0 +1,93 @@
+@keyframes boxmove{
+  0%{
+    left:100px;
+  }
+  25%{
+    top:200px;
+  }
+  50%{
+    top:400px;
+    transform:scale(2.25) rotate(-650deg);
+  }
+  100%{
+    left:500px;
+  }
+}
+body{
+  background:#F0F0F0;
+}
+.icon{
+  position:relative;
+  left:100px;
+  top:100px;
+  width:75px;
+  height:75px;
+  background: linear-gradient(to          bottom,#FD9C36 0%,#FCBE5C 80%);
+ border-radius:10px;
+ box-shadow: 0px 2px 5px rgba(0,0,0,.3);
+ transform:translate(-50%,-50%);
+ animation-name:boxmove;
+ animation-duration:2s;
+ animation-iteration-count:infinite;
+ animation-direction:alternate;
+}
+.water {
+  position: absolute;
+  bottom:0;
+  background: rgba(0,190,177,.4);
+  width:75px;
+}
+.wave1{
+  height:22px;
+  border-top-right-radius:100% 0px;
+  border-top-left-radius:100% 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.wave2{
+  height:25px;
+  border-top-right-radius:100% 5px;
+  border-top-left-radius:100% 5px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.wave3{
+  height:20px;
+  border-top-right-radius:100% 15px;
+  border-top-left-radius:100% 0px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.boat{
+  position:absolute;
+  left:50%;
+  bottom:8px;
+  transform:translate(-50%,-50%);
+  background: #EE6648;
+  border-bottom-right-radius:40px;
+  border-bottom-left-radius:40px;
+  width: 50px;
+  height: 15px;
+}
+.sail1{
+  position:absolute;
+  left:calc(50% + 12px);
+  top:28px;
+  transform:translate(-50%,-50%);
+  width:0;
+  height:0;
+  border-style:solid;
+  border-width:30px 0 0 25px;
+  border-color:transparent transparent transparent #FFF8ED;
+}
+.sail2{
+  position:absolute;
+  left:calc(50% - 14px);
+  top:32px;
+  transform:translate(-50%,-50%);
+  width:0;
+  height:0;
+  border-style:solid;
+  border-width:0 0 22px 22px;
+  border-color:transparent transparent #FFF8ED transparent;
+}
